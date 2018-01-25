@@ -1,4 +1,5 @@
 import UIKit
+import SQLite
 
 class BusTripTableViewController: UITableViewController {
 
@@ -7,8 +8,42 @@ class BusTripTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.getDataFromServer()
+        if let t = UserDefaults.standard.object(forKey: "trips") {
+            trips = t as! [BusTrip]
+        } else {
+            self.getDataFromServer()
+        }
+
+        prepareStorage()
         self.tableView.reloadData()
+    }
+
+    private func prepareStorage() {
+
+        do {
+            let databaseFileName = "dbtest.sqlite3"
+            let databaseFilePath = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(databaseFileName)"
+            let db = try Connection(databaseFilePath)
+
+
+            let trips = Table("trips")
+            let id = Expression<Int64>("id")
+            let name = Expression<String?>("name")
+            let email = Expression<String>("email")
+
+            try db.run(trips.create { t in
+                t.column(id, primaryKey: true)
+                t.column(name)
+                t.column(email, unique: true)
+            })
+
+//            let fm = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+//
+//            let fileUrl = try fm.appendingPathComponent("trips").appendPathExtension("sqlite3")
+//            let db = try Connection()
+        } catch {
+            print(error)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,7 +83,7 @@ class BusTripTableViewController: UITableViewController {
 
         self.present(alert, animated: true, completion: nil)
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tripCell", for: indexPath)
 
@@ -73,6 +108,8 @@ class BusTripTableViewController: UITableViewController {
             }
         } catch {
         }
+
+//        UserDefaults.standard.set(self.trips, forKey: "trips")
     }
 
 
@@ -92,7 +129,7 @@ class BusTripTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 
