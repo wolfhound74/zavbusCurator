@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE24511784258E07800C68FF /* TripRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE24561603154B30184439FE /* TripRecord.swift */; };
+		DE245324E060FD6A90B5053D /* BusTripProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE245EF5ABB9392625F15C31 /* BusTripProgram.swift */; };
+		DE245799927257558AF91EBF /* BusTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE245141288C865CFC1FF0ED /* BusTrip.swift */; };
 		E75CFAC42018FAAC005B4C89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CFAC32018FAAC005B4C89 /* AppDelegate.swift */; };
 		E75CFAC62018FAAC005B4C89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CFAC52018FAAC005B4C89 /* ViewController.swift */; };
 		E75CFAC92018FAAC005B4C89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E75CFAC72018FAAC005B4C89 /* Main.storyboard */; };
@@ -14,6 +17,9 @@
 		E75CFACE2018FAAC005B4C89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E75CFACC2018FAAC005B4C89 /* LaunchScreen.storyboard */; };
 		E75CFAD92018FAAC005B4C89 /* zavbusCuratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CFAD82018FAAC005B4C89 /* zavbusCuratorTests.swift */; };
 		E75CFAE42018FAAC005B4C89 /* zavbusCuratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CFAE32018FAAC005B4C89 /* zavbusCuratorUITests.swift */; };
+		E75CFAF42018FB6B005B4C89 /* BusTripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CFAF32018FB6B005B4C89 /* BusTripTableViewController.swift */; };
+		E75CFAF62018FD2A005B4C89 /* TripRecordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CFAF52018FD2A005B4C89 /* TripRecordTableViewController.swift */; };
+		E75CFAF8201905DB005B4C89 /* TripRecordInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CFAF7201905DB005B4C89 /* TripRecordInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE245141288C865CFC1FF0ED /* BusTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusTrip.swift; sourceTree = "<group>"; };
+		DE24561603154B30184439FE /* TripRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripRecord.swift; sourceTree = "<group>"; };
+		DE245EF5ABB9392625F15C31 /* BusTripProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusTripProgram.swift; sourceTree = "<group>"; };
 		E75CFAC02018FAAC005B4C89 /* zavbusCurator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zavbusCurator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E75CFAC32018FAAC005B4C89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E75CFAC52018FAAC005B4C89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +56,9 @@
 		E75CFADF2018FAAC005B4C89 /* zavbusCuratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zavbusCuratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E75CFAE32018FAAC005B4C89 /* zavbusCuratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zavbusCuratorUITests.swift; sourceTree = "<group>"; };
 		E75CFAE52018FAAC005B4C89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E75CFAF32018FB6B005B4C89 /* BusTripTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusTripTableViewController.swift; sourceTree = "<group>"; };
+		E75CFAF52018FD2A005B4C89 /* TripRecordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRecordTableViewController.swift; sourceTree = "<group>"; };
+		E75CFAF7201905DB005B4C89 /* TripRecordInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRecordInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,8 @@
 		E75CFAC22018FAAC005B4C89 /* zavbusCurator */ = {
 			isa = PBXGroup;
 			children = (
+				E75CFAF22018FB56005B4C89 /* Model */,
+				E75CFAF12018FB44005B4C89 /* Controllers */,
 				E75CFAC32018FAAC005B4C89 /* AppDelegate.swift */,
 				E75CFAC52018FAAC005B4C89 /* ViewController.swift */,
 				E75CFAC72018FAAC005B4C89 /* Main.storyboard */,
@@ -123,6 +137,26 @@
 				E75CFAE52018FAAC005B4C89 /* Info.plist */,
 			);
 			path = zavbusCuratorUITests;
+			sourceTree = "<group>";
+		};
+		E75CFAF12018FB44005B4C89 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E75CFAF32018FB6B005B4C89 /* BusTripTableViewController.swift */,
+				E75CFAF52018FD2A005B4C89 /* TripRecordTableViewController.swift */,
+				E75CFAF7201905DB005B4C89 /* TripRecordInfoViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E75CFAF22018FB56005B4C89 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE245EF5ABB9392625F15C31 /* BusTripProgram.swift */,
+				DE245141288C865CFC1FF0ED /* BusTrip.swift */,
+				DE24561603154B30184439FE /* TripRecord.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +294,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E75CFAC62018FAAC005B4C89 /* ViewController.swift in Sources */,
+				E75CFAF42018FB6B005B4C89 /* BusTripTableViewController.swift in Sources */,
 				E75CFAC42018FAAC005B4C89 /* AppDelegate.swift in Sources */,
+				E75CFAF62018FD2A005B4C89 /* TripRecordTableViewController.swift in Sources */,
+				DE245324E060FD6A90B5053D /* BusTripProgram.swift in Sources */,
+				DE245799927257558AF91EBF /* BusTrip.swift in Sources */,
+				E75CFAF8201905DB005B4C89 /* TripRecordInfoViewController.swift in Sources */,
+				DE24511784258E07800C68FF /* TripRecord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
